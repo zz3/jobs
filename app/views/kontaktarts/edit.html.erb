@@ -1,0 +1,16 @@
+<h1>Editing kontaktart</h1>
+
+<% form_for(@kontaktart) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @kontaktart %> |
+<%= link_to 'Back', kontaktarts_path %>

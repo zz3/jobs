@@ -1,0 +1,187 @@
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+  
+  padding: 1px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+.show_button {
+	width: 24px;
+	height: 24px;
+}
+
+.table_row_lorange {
+	background-color: #FBA87A;
+}
+
+.table_row_lokker {
+	background-color: #FBEB7A;
+}
+
+a.table_row {
+	background-color: green;
+}
+
+a.table_row:hover {
+	background-color: green;
+}
+
+.table {
+	border: 3px solid #BBFF91; 
+}
+
+td {
+	text-align: left;
+	vertical-align: top;
+	padding-left: 5px;
+	padding-top: 2px;
+}
+
+#container {
+position: relative;
+width: 1024px;
+margin: 0 auto;
+}
+
+#header {
+position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 900px;
+	height: 40px;
+	background-color: #FBEB7A;
+
+}
+
+div#navbar {
+	# border:1px solid #888; 
+	float: left;
+	position: absolute;
+	top: 50px;
+	left: 5px;
+	width: 100px;
+	height: 300px;
+	background-color: #FBEB7A;
+}
+
+a.navlink {
+	background-color: #FBEB7A;
+	color: #8E8E8E;
+	text-decoration: none;
+	width: 100px;
+	display: block;
+}
+
+a.navlink:hover, a.navlink_active {
+	color: white;
+	background-color: #D3C774;
+	text-decoration: none;
+	width: 100px;
+	display: block;
+}
+
+#content {
+	position: absolute;
+	top: 50px;
+	left: 120px;
+	width: 800px;
+}
+
+div.eingabe_container {
+	position: absolute;
+	background-color: lightgrey;
+	float: left;
+	width: 100%;
+	padding: 5px;
+	/* border: 1px solid grey; */
+}
+
+div.firma_container {
+	float: left;
+	width: 220px;	
+}
+
+div.kontakt_container {
+	margin-left: 55%;
+	width: 40%;
+}
+
+div.bewerbungen_editfirma {
+	float: left;
+	width: 45%;
+	background-color: orange;
+	padding: 3px;
+	
+}
+
+
+
+table.show_firma {
+	
+}
+
+fieldset.show_firma {
+}
+
+fieldset.show_kontakt_eins {
+	float: right;
+}
+
+fieldset.show_kontakt_zwei {
+	float: right;
+}
+
+tr.bewerbung.firma.form {
+	cursor: pointer;
+}
+
+
+a.table_col_sort, a.table_col_sort:hover, a.table_col_sort:visited {	
+	color: #B3A754;
+	text-decoration: none;
+}

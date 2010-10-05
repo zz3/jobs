@@ -1,0 +1,31 @@
+<div class="bewerbung beschreibung">
+
+<div class="bewerbung bemerkung">
+  <b>Anzeige:</b>
+  <%= text_area_tag "bemerkung", "#{@bewerbung.bemerkung}", :rows => "6", :cols => "93", :disabled => true %>
+</div>
+
+<p class="bewerbung">
+  <b>Stellenbeschreibung:</b>
+  <%=h @bewerbung.stellenbeschreibung %>
+</p>
+
+<p class="bewerbung">
+  <b>Referenz:</b>
+  <%=h @bewerbung.referenz %>
+</p>
+
+<div class="bewerbung firma" onclick='derefer("<%= url_for(:controller => "firmas", :action => "show", :id => "#{@bewerbung.firma.id}") %>")'>
+  <b>Firma:</b>
+  <%=h @bewerbung.firma.firma %>
+</div>
+
+</div>
+
+<%= render :partial => 'kontakts' %>
+
+<div class='kontakt eingabe'>
+<% form_for [@bewerbung, Kontakt.new] do |f| %>
+	<%= render :partial => 'kontakts/form' %>
+<% end %>
+</div>

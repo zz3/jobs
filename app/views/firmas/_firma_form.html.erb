@@ -1,0 +1,94 @@
+<% ele_kontakt = { :ansprech => "Ansprechpartner", :tele => "Telefon", :email => "E-Mail" } %>
+
+<% form_for(@firma) do |f| %>
+	<div class='eingabe_container'>
+		<div class='firma_container'>
+		<fieldset class='show_firma'>
+ 		<legend>Firma</legend>
+		<table class='firma' border="0">
+		<colgroup>
+			<col width="30%">
+			<col width="70%">
+		<tr>
+    	<td><%= f.label :firma %> </td>
+    	<td colspan="3">
+    		<%= f.text_field :firma, :size => '35', :disabled => true, :class => 'firma_input_field'  %>
+    	</td>
+    </tr>
+    <tr>
+    	<td><%= f.label :firma_kurz, "kurz"%> </td>
+    	<td>
+    		<%= f.text_field :firma_kurz, :size => '10', :disabled => true, :class => 'firma_input_field'%>
+    	</td>
+  	</tr>
+	 	<tr>
+ 			<td><%= f.label :plz, "PLZ" %></td>
+ 			<td><%= f.text_field :plz , :size => '5', :disabled => true, :class => 'firma_input_field' %></td>
+ 		</tr>
+    <tr>
+ 			 <td><%= f.label :ort %></td>
+ 			 <td><%= f.text_field :ort, :disabled => true, :class => 'firma_input_field' %></td>
+ 		</tr>
+    <tr>
+    	<td><%= f.label :strasse %></td>
+    	<td><%= f.text_field :strasse, :disabled => true, :class => 'firma_input_field' %></td>
+  	</tr>
+  	<tr>
+    	<td><%= f.label :url, "URL" %></td>
+    	<td><%= f.text_field :url, :disabled => true, :class => 'firma_input_field' %></td>
+  	</tr>
+ 		</table>
+ 		</fieldset>
+	
+		</div>
+		
+	
+	
+	<div class="kontakt_container">
+	<fieldset class='show_kontakt_eins'>
+ 	<legend>Kontakt 1</legend>
+ 	<table class='show_kontakt'>
+  <tr>
+    <td><%= f.label :kontakt1, ele_kontakt[:ansprech] %></td>
+    <td><%= f.text_field :kontakt1, :disabled => true, :class => 'firma_input_field' %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :telefon1, ele_kontakt[:tele] %></td>
+    <td><%= f.text_field :telefon1, :disabled => true, :class => 'firma_input_field' %></td>
+ 	</tr>
+ 	<tr>
+    <td><%= f.label :email1, ele_kontakt[:email] %></td>
+    <td><%= f.text_field :email1, :disabled => true, :class => 'firma_input_field' %></td><td>
+ 	</tr>
+	</table>    
+	</fieldset>
+	<fieldset class="show_kontakt_zwei">
+ 	<legend>Kontakt 2</legend>
+ 	<table class="show_kontakt">
+  <tr>
+    <td><%= f.label :kontakt2, ele_kontakt[:ansprech] %></td>
+    <td><%= f.text_field :kontakt2, :disabled => true, :class => 'firma_input_field' %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :telefon2, ele_kontakt[:tele] %></td>
+    <td><%= f.text_field :telefon2, :disabled => true, :class => 'firma_input_field' %></td>
+ 	</tr>
+ 	<tr>
+    <td><%= f.label :email2, ele_kontakt[:email] %></td>
+    <td><%= f.text_field :email2, :disabled => true, :class => 'firma_input_field' %></td><td>
+ 	</tr>
+</table>    
+</fieldset>
+	
+	</div>
+
+<div class="eingabe_ctrl">
+	<input onclick="toggleInputAttribute()" type="checkbox" name="edit_firma" id="edit_firma" />
+	<span class='ctrl_label'>Adresse bearbeiten</span>
+	<%= f.submit "#{button_label}", :class => 'eingabe_button' %>
+</div>	
+	</div>
+
+
+
+<% end %>

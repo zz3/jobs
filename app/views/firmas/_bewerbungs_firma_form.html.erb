@@ -1,0 +1,19 @@
+<div class="bewerbungs_firma">
+
+<fieldset>
+<legend>Bewerbungen</legend>
+
+<table border="0" rules="none">
+
+<% for bewerbung in @bewerbungs %>
+ <tr class="bewerbung firma form" onclick='derefer("<% concat("bewerbungs" + "/" + bewerbung.id.to_s) %>")'>
+<td><%= truncate bewerbung.stellenbeschreibung %></td>
+<td>vor</td>
+<td><%= distance_of_time_in_words(Time.now, bewerbung.created_at) %></td>
+</tr>
+<% end %>
+
+</table>
+</fieldset>
+
+</div>

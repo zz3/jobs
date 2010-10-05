@@ -1,0 +1,179 @@
+div.bewerbung.beschreibung {
+	margin-left: 0;
+	width: 100%;
+	border: 1px solid grey;
+	background-color: #FFFFCC;
+	margin-bottom: 20px;
+}
+
+div.bewerbung.beschreibung div.bewerbung.bemerkung {
+	margin-left: 4px;
+	width: 100%;
+}
+
+p.bewerbung, div.bewerbung {
+	margin-left: 4px;
+}
+
+div.bewerbung.firma {
+	cursor: pointer;
+}
+
+div.table div.row.eingabe div.kontakt.input {
+/*	margin-right: 250px; */
+	}
+div.table div.row.eingabe div.kontakt.label {
+	vertical-align: top;
+	}
+	
+div.table div.row.eingabe {
+	cursor: default;
+	height: 30px;
+	}
+
+div.table.eingabe {
+	/* margin: 10px; */
+	width: 100%;
+	background-color: #FFB13D;
+	/*height: 60px;*/
+	}
+
+div.kontakt_edit {
+	/* position: relative;
+	 width: 100%; */
+}
+
+span.ctrl_label {
+	color: #444;
+	font-size: 12px;
+	}
+
+.firma_input_field {
+	color: #000;
+	}
+
+input.eingabe_button {
+	visibility: hidden;
+}
+
+div.eingabe_ctrl {
+	position: absolute;
+	bottom: 5px;
+}
+
+div.bewerbungs_firma {
+	position: absolute;
+	/* float: left; */
+	width: 45%;
+	background-color: #FFFFCC;
+	padding: 5px;
+	top: 265px;
+	/* padding: 5px; */
+	margin-top: 5px;
+	
+}
+
+div.firma_container {
+	position: absolute;
+	/* float: left; */
+	left: 5px;
+	width: 40%;
+	/* height: 300px; */
+}
+
+div.kontakt_container {
+	position: absolute;
+	/* float: left; */
+	right: 5px;
+}
+
+div.eingabe_container {
+	position: absolute;
+	background-color: #FFB13D;
+	/* float: left; */
+	width: 100%;
+	padding: 5px;
+	height: 250px; 
+	/* border: 1px solid grey; */
+}
+
+div.table_col_sort {
+	/* padding-top: 20px; */
+	vertical-align: middle;
+	text-align: center;
+	
+} 
+
+div.table_col_sort a {
+	color: #6E6E6E;
+	text-decoration: none;
+	
+} 
+
+div.table_col_sort a:hover {
+	color: #3E3E3E;
+}
+	
+div.table {
+	display: table;
+	width: 100%;
+	border: 1px solid #FFB13D;
+	/* font-style: bold; */
+}
+
+div.table div.row {
+	display: table-row;
+	cursor: pointer;
+	height: 30px;
+}
+
+div.table div.row.head {
+	background-color: #FFFFCC;
+	cursor: default;
+}
+
+div.row.orange {
+	background-color: #FFB13D;
+}
+
+div.row.orange:hover {
+	background-color: #FFFF1A;
+}
+
+div.row.okker {
+	background-color: #FFFFCC;
+}
+
+div.row.okker:hover {
+	background-color: #FFFF1A;
+}
+
+div.table_firmas div div {
+	display: table-cell;
+	padding-left: 2px;
+}
+
+div.table div div {
+	display: table-cell;
+	padding-left: 2px;
+}
+	
+div.kontakt.eingabe {
+	position: relative;
+	top: 20px;
+}
+
+div.kontakt.eingabe fieldset.eingabe {
+	width: 55%;
+	}
+
+div.kontakt.eingabe fieldset.eingabe div.label {
+	float: left;
+	position: relative;
+	margin-right: 5px;
+	}
+	
+div.kontakt.eingabe fieldset.eingabe div.field {
+		position: relative;
+		margin-right: 5px;
+	}

@@ -1,0 +1,106 @@
+a.navlink:hover, a.navlink_active {
+	position: relative;
+	color: white;
+	background-color: #D3C774;
+	text-decoration: none;
+	width: 100%;
+	display: block;
+}
+
+a.navlink {
+	position: relative;
+	background-color: #FBEB7A;
+	color: #8E8E8E;
+	text-decoration: none;
+	width: 100%;
+	display: block;
+}
+
+div#content {
+	position: absolute;
+	top: 45px;
+	left: 110px; 
+	width: 785px;/* header-width - navbar-width -left */
+	height: 100%;
+}
+
+div#navbar {
+	/* border:1px solid #888; */ 
+	/* float: left; */
+	position: absolute;
+	top: 45px;
+	left: 5px;
+	width: 100px;
+	height: 100%;
+	background-color: #FBEB7A;
+}
+
+#header {
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	width: 900px;
+	height: 40px;
+	background-color: #FBEB7A;
+}
+
+#container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0; /* auto */
+}
+
+body { 
+	background-color: #fff; 
+	color: #333; 
+}
+
+body, p, ol, ul, td {
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+  padding: 1px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px; 
+  font-size: 11px;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

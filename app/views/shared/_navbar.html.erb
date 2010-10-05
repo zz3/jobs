@@ -1,0 +1,29 @@
+<div id="navbar">
+		<%= link_to 'Bewerbungen', {:controller => 'bewerbungs', :action => 'index'}, 
+		:class => navlink_name({:controller => 'bewerbungs', :action => 'index'}) %>
+		
+		<%= link_to image_tag(button_path :type => 'add', :alt => 'Add'), 
+		{:controller => 'bewerbungs', :action => 'new'}, 
+		:class => navlink_name({:controller => 'bewerbungs', :action => 'new'}) %>
+		
+		<%= link_to 'Adressen', {:controller => 'firmas', :action => 'index'}, 
+			:class => navlink_name( {:controller => 'firmas', :action => 'index'}) %>
+			
+		<%= link_to image_tag(button_path :type => 'add', :alt => 'Add'), 
+		{:controller => 'firmas', :action => 'new'}, 
+		:class => navlink_name({:controller => 'firmas', :action => 'new'}) %>
+		
+		<%= link_to 'Leads', {:controller => 'kontakts', :action => 'index'}, 
+		:class => navlink_name({:controller => 'kontakts', :action => 'index'}) %>
+		
+		<%= link_to image_tag(button_path :type => 'add', :alt => 'Add'), 
+		{:controller => 'kontakts', :action => 'new'}, 
+		:class => navlink_name({:controller => 'kontakts', :action => 'new'}) %>
+		
+		<%= link_to 'Leadarten', {:controller => 'kontaktarts', :action => 'index'}, 
+		:class => navlink_name({:controller => 'kontaktarts', :action => 'index'}) %>
+		
+		<%= link_to image_tag(button_path :type => 'add', :alt => 'Add'), 
+		{:controller => 'kontaktarts', :action => 'new'}, 
+		:class => navlink_name({:controller => 'kontaktarts', :action => 'new'}) %>
+</div>

@@ -1,0 +1,42 @@
+<span class="show_firma">
+  <b>Firma:</b>
+  <%=h @firma.firma %>
+   <b>Firma kurz:</b>
+  <%=h @firma.firma_kurz %>
+</span>
+<br/>
+<span class="show_firma">
+  <b>Ort:</b>
+  <%=h @firma.ort %>
+
+  <b>Strasse:</b>
+  <%=h @firma.strasse %>
+</span>
+<br/>
+<span class="show_firma">
+	<b>Kontakt1:</b>
+  <%=h @firma.kontakt1 %>
+  
+  <b>Kontakt2:</b>
+  <%=h @firma.kontakt2 %>
+</span>
+<br/>
+<span class="show_firma">
+  <b>Telefon1:</b>
+  <%=h @firma.telefon1 %>
+
+  <b>Telefon2:</b>
+  <%=h @firma.telefon2 %>
+</span>
+<br/>
+<span>
+  <b>Email1:</b>
+  <%=h @firma.email1 %>
+
+  <b>Email2:</b>
+  <%=h @firma.email2 %>
+</span>
+<br/>
+<% for bewerbung in @bewerbungs %>
+ <%= bewerbung.stellenbeschreibung %>
+<% end %>

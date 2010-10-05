@@ -1,0 +1,14 @@
+<div id="navbar">
+	<table class="navtable">
+		<tr>
+		<div ><td class="navtd">
+		<%= link_to 'Bewerbungen', {:controller => 'bewerbungs', :action => 'index'}, :class => 'navlink' %>
+		</td></div>
+		</tr>
+		<tr>
+		<div ><td class="navtd">
+		<%= link_to 'Adressen', {:controller => 'firmas', :action => 'index'}, :class => 'navlink' %>
+		</td></div>
+		</tr>
+	</table>
+</div>

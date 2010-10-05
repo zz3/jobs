@@ -1,0 +1,18 @@
+<p>
+  <b>Inhalt:</b>
+  <%=h @kontakt.inhalt %>
+</p>
+
+<p>
+  <b>Kontaktart:</b>
+  <%=h @kontakt.kontaktart_id %>
+</p>
+
+<p>
+  <b>Bewerbung:</b>
+  <%=h @kontakt.bewerbung_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_kontakt_path(@kontakt) %> |
+<%= link_to 'Back', kontakts_path %>

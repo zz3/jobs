@@ -1,0 +1,38 @@
+<div class="table bewerbung">
+<% form_tag('/bewerbungs') do %>
+<%= check_box_tag('only_actives', '1', session[:only_actives_checked]) %>nur Aktive		
+<%= observe_field :only_actives,
+									:url => {:action => 'toggle_active'},
+									:update => 'bewerbungs_table',
+									:with => '"only_actives_checked=" + only_actives.checked'
+									%>						
+<% end %>
+  <div class='row head'>
+    <div class='table_col_sort'><%= link_to_remote 'Stellenbeschreibung', :update => 'bewerbungs_table', 
+	:url => { :controller => 'bewerbungs', :action => 'sort', :criterion => 'stellenbeschreibung' }, :html => { :class => 'table_col_sort' } %></div>
+    <div class='table_col_sort'><%= link_to_remote 'Firma', :update => 'bewerbungs_table', 
+	:url => { :controller => 'bewerbungs', :action => 'sort', :criterion => 'firma' }, :html => { :class => 'table_col_sort' } %></div>
+    <div class='table_col_sort'><%= link_to_remote 'beworben vor', :update => 'bewerbungs_table', 
+	:url => { :controller => 'bewerbungs', :action => 'sort', :criterion => 'created_at'}, :html => { :class => 'table_col_sort' } %></div>
+ 
+ <div><span class='show_button'></span></div>
+ <div><span class='show_button'></span></div>
+ <div><span class='show_button'></span></div>
+  </div>
+  
+  
+<% for bewerbung in @bewerbungs %>
+	<div onclick='derefer("<% concat(@current_controller + "/" + bewerbung.id.to_s) %>")' 
+	class="<%= cycle('row orange', 'row okker')  %>">
+		
+    <div><%=h truncate bewerbung.stellenbeschreibung %></div>
+    <div><%=h truncate bewerbung.firma.firma %></div>
+    <div><%=h distance_of_time_in_words(Time.now, bewerbung.created_at) %></div>
+    <div><%= link_to image_tag(button_path :type => 'search', :alt => 'Show'),  bewerbung, {:class => 'show_button'} %></div>
+    <div><%= link_to image_tag(button_path :type => 'modify', :class => 'show_button', :alt => 'Edit'), edit_bewerbung_path(bewerbung) %></div>
+    <div><%= link_to image_tag(button_path :type => 'delete', :class => 'show_button', :alt => 'Delete'), bewerbung, :confirm => 'Are you sure?', :method => :delete %></div>
+		
+  </div>
+<% end %>
+</div>
+

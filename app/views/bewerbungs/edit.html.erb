@@ -1,0 +1,28 @@
+<h1>Editing bewerbung</h1>
+
+<% form_for(@bewerbung) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :stellenbeschreibung %><br />
+    <%= f.text_field :stellenbeschreibung %>
+  </p>
+  <p>
+    <%= f.label :bemerkung %><br />
+    <%= f.text_area :bemerkung %>
+  </p>
+  <p>
+    <%= f.label :referenz %><br />
+    <%= f.text_field :referenz %>
+  </p>
+  <p>
+    <%= f.label :firma_id %><br />
+    <%= f.text_field :firma_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @bewerbung %> |
+<%= link_to 'Back', bewerbungs_path %>

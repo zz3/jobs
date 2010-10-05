@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  firma_kurz: MyString
+  firma: MyString
+  ort: MyString
+  strasse: MyString
+  telefon1: MyString
+  telefon2: MyString
+  email1: MyString
+  email2: MyString
+  kontakt1: MyString
+  kontakt2: MyString
+
+two:
+  firma_kurz: MyString
+  firma: MyString
+  ort: MyString
+  strasse: MyString
+  telefon1: MyString
+  telefon2: MyString
+  email1: MyString
+  email2: MyString
+  kontakt1: MyString
+  kontakt2: MyString

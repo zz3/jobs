@@ -1,0 +1,32 @@
+<div class="table firmas">
+  <div class='row head'>
+    <div class='table_col_sort'><%= link_to_remote 'Firma kurz', :update => 'firmas_table', 
+			:url => { :controller => 'firmas', :action => 'sort', :criterion => 'firma_kurz' }, :html => { :class => 'table_col_sort' } %></div>
+		<div class='table_col_sort'><%= link_to_remote 'Firma', :update => 'firmas_table', 
+			:url => { :controller => 'firmas', :action => 'sort', :criterion => 'firma' }, :html => { :class => 'table_col_sort' } %></div>
+	  <div class='table_col_sort'><%= link_to_remote 'Ort', :update => 'firmas_table', 
+			:url => { :controller => 'firmas', :action => 'sort', :criterion => 'ort' }, :html => { :class => 'table_col_sort' } %></div>
+		<div class='table_col_sort'><%= link_to_remote 'Strasse', :update => 'firmas_table', 
+			:url => { :controller => 'firmas', :action => 'sort', :criterion => 'strasse' }, :html => { :class => 'table_col_sort' } %></div>
+  	<div class='table_col_sort'><%= link_to_remote 'Kontakt', :update => 'firmas_table', 
+			:url => { :controller => 'firmas', :action => 'sort', :criterion => 'kontakt1' }, :html => { :class => 'table_col_sort' } %></div> 
+ <div><span class='show_button'></span></div>
+ <div><span class='show_button'></span></div>
+ <div><span class='show_button'></span></div>
+  </div>
+  
+  
+<% for firma in @firmas %>
+	<div onclick='derefer("<% concat(@current_controller + "/" + firma.id.to_s) %>")' 
+	class="<%= cycle('row orange', 'row okker')  %>">
+    <div><%=h firma.firma_kurz %></div>
+    <div><%=h truncate firma.firma %></div>
+    <div><%=h firma.ort %></div>
+    <div><%=h firma.strasse %></div>
+    <div><%=h firma.kontakt1 %></div>
+    <div><%= link_to image_tag(button_path :type => 'search', :alt => 'Show'),  firma, {:class => 'show_button'} %></div>
+    <div><%= link_to image_tag(button_path :type => 'modify', :class => 'show_button', :alt => 'Edit'), edit_firma_path(firma) %></div>
+    <div><%= link_to image_tag(button_path :type => 'delete', :class => 'show_button', :alt => 'Delete'), firma, :confirm => 'Are you sure?', :method => :delete %></div>
+  </div>
+<% end %>
+</div>

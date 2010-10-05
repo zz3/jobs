@@ -1,0 +1,20 @@
+<h1>Listing kontaktarts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for kontaktart in @kontaktarts %>
+  <tr>
+    <td><%=h kontaktart.name %></td>
+    <td><%= link_to 'Show', kontaktart %></td>
+    <td><%= link_to 'Edit', edit_kontaktart_path(kontaktart) %></td>
+    <td><%= link_to 'Destroy', kontaktart, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New kontaktart', new_kontaktart_path %>

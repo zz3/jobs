@@ -1,0 +1,25 @@
+<% form_for(@kontakt) do |f| %>
+  <%= f.error_messages %>
+<div class='kontakt_edit'>
+	<div class='table eingabe'>
+	<div class='row eingabe'>
+		<div class='kontakt label'><%= f.label :kontaktart_id %></div>
+  	<div class='kontakt input'><%= select('kontakt', 'kontaktart_id', @kontaktarts.collect {|fi| [fi.name, fi.id]}, {:selected => @kontakt.kontaktart_id}) %></div>
+  </div>
+  <div class='row eingabe'>
+		<div class='kontakt label'><%= f.label :created_at, 'Am' %></div>
+ 		<% CalendarDateSelect.format = :finnish %>
+		<div class='kontakt input'><%= f.calendar_date_select :created_at, :time => true, :popup => 'force' %></div>
+  </div>
+  <div class='row eingabe'>
+    <div class='kontakt label'><%= f.label :inhalt %></div>
+    <div class='kontakt input'><%= f.text_area :inhalt, :rows => 5, :cols => 60 %></div>
+  </div>
+  <div class='row eingabe'>
+     <div class='kontakt label'><%= f.submit "Update" %></div>
+   </div>
+   <% if(! @bewerbung.nil?) %>
+		<div><%= hidden_field_tag('kontakt[bewerbung_id]', "#{@bewerbung.id}") %></div>
+	<% end %>
+</div>
+<% end %>

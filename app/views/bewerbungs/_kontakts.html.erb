@@ -1,0 +1,10 @@
+<div class='table'>
+<% for kontakt in @kontakts %>
+	<div class="<%= cycle('row orange', 'row okker')  %>"
+	onclick='derefer("<%= url_for(kontakt) %>")'>
+	<div><%= kontakt.kontaktart.name %></div>
+	<div><%= kontakt.created_at.to_formatted_s(:long) %></div>
+	<div><%= text_area_tag('kontakt', "#{kontakt.inhalt}", :rows => 1, :cols => 40, :disabled => 'disabled') %></div>
+	</div>
+<% end %>
+</div>
